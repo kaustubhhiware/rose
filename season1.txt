@@ -1,0 +1,251 @@
+<table class="wikitable plainrowheaders wikiepisodetable" style="width:100%">
+<tr style="color:white;text-align:center">
+<th scope="col" style="background:#B3002D;width:5%"><abbr title="Number">No.</abbr><br />
+overall</th>
+<th scope="col" style="background:#B3002D;width:5%"><abbr title="Number">No.</abbr> in<br />
+season</th>
+<th scope="col" style="background:#B3002D;width:26%">Title</th>
+<th scope="col" style="background:#B3002D;width:12%">Directed by</th>
+<th scope="col" style="background:#B3002D;width:30%">Written by</th>
+<th scope="col" style="background:#B3002D;width:13%">Original air date</th>
+<th scope="col" style="background:#B3002D;width:9%">U.S. viewers<br />
+(millions)</th>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep1" style="text-align:center">1</th>
+<td>1</td>
+<td class="summary" style="text-align:left">"Pilot"<br />
+"Most Chicks Won't Eat Veal"</td>
+<td><a href="/wiki/James_Burrows" title="James Burrows">James Burrows</a></td>
+<td><a href="/wiki/Chuck_Lorre" title="Chuck Lorre">Chuck Lorre</a> &amp; <a href="/wiki/Lee_Aronsohn" title="Lee Aronsohn">Lee Aronsohn</a></td>
+<td>September&#160;22,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-09-22</span>)</span></td>
+<td>18.44<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep2" style="text-align:center">2</th>
+<td>2</td>
+<td class="summary" style="text-align:left">"Big Flappy Bastards"</td>
+<td><a href="/wiki/Andy_Ackerman" title="Andy Ackerman">Andy Ackerman</a></td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : <a href="/wiki/Eddie_Gorodetsky" title="Eddie Gorodetsky">Eddie Gorodetsky</a> &amp; Jeff Abugov</td>
+<td>September&#160;29,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-09-29</span>)</span></td>
+<td>16.18<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep3" style="text-align:center">3</th>
+<td>3</td>
+<td class="summary" style="text-align:left">"Go East on Sunset Until You Reach the Gates of Hell"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Don Foster<br />
+<i>Teleplay by</i> : Mark Roberts &amp; Lee Aronsohn</td>
+<td>October&#160;6,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-10-06</span>)</span></td>
+<td>14.82<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep4" style="text-align:center">4</th>
+<td>4</td>
+<td class="summary" style="text-align:left">"If I Can't Write My Chocolate Song, I'm Going to Take a Nap"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Susan Beavers &amp; Don Foster</td>
+<td>October&#160;13,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-10-13</span>)</span></td>
+<td>14.73<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep5" style="text-align:center">5</th>
+<td>5</td>
+<td class="summary" style="text-align:left">"The Last Thing You Want to Do Is Wind Up with a Hump"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Eddie Gorodetsky &amp; Jeff Abugov</td>
+<td>October&#160;20,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-10-20</span>)</span></td>
+<td>15.24<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep6" style="text-align:center">6</th>
+<td>6</td>
+<td class="summary" style="text-align:left">"Did You Check with the Captain of the Flying Monkeys?"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Susan Beavers &amp; Don Foster</td>
+<td>October&#160;27,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-10-27</span>)</span></td>
+<td>15.82<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep7" style="text-align:center">7</th>
+<td>7</td>
+<td class="summary" style="text-align:left">"If They Do Go Either Way, They're Usually Fake"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Don Foster<br />
+<i>Teleplay by</i> : <a href="/wiki/Mark_Roberts_(TV_producer)" title="Mark Roberts (TV producer)">Mark Roberts</a> &amp; Lee Aronsohn</td>
+<td>November&#160;3,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-11-03</span>)</span></td>
+<td>16.02<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep8" style="text-align:center">8</th>
+<td>8</td>
+<td class="summary" style="text-align:left">"Twenty-Five Little Pre-pubers Without a Snootful"</td>
+<td>Chuck Lorre</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Eddie Gorodetsky &amp; Jeff Abugov</td>
+<td>November&#160;10,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-11-10</span>)</span></td>
+<td>15.81<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep9" style="text-align:center">9</th>
+<td>9</td>
+<td class="summary" style="text-align:left">"Phase One, Complete"</td>
+<td>Andy Ackerman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Susan Beavers &amp; Don Foster</td>
+<td>November&#160;17,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-11-17</span>)</span></td>
+<td>15.98<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep10" style="text-align:center">10</th>
+<td>10</td>
+<td class="summary" style="text-align:left">"Merry Thanksgiving"</td>
+<td><a href="/wiki/Jay_Sandrich" title="Jay Sandrich">Jay Sandrich</a></td>
+<td>Chuck Lorre &amp; Lee Aronsohn</td>
+<td>November&#160;24,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-11-24</span>)</span></td>
+<td>17.14<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep11" style="text-align:center">11</th>
+<td>11</td>
+<td class="summary" style="text-align:left">"Alan Harper, Frontier Chiropractor"</td>
+<td><a href="/wiki/Robert_Berlinger" title="Robert Berlinger">Robert Berlinger</a></td>
+<td><i>Story by</i> : Chuck Lorre &amp; Don Foster<br />
+<i>Teleplay by</i> : Lee Aronsohn &amp; Mark Roberts</td>
+<td>December&#160;15,&#160;2003<span style="display:none">&#160;(<span class="bday dtstart published updated">2003-12-15</span>)</span></td>
+<td>14.77<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep12" style="text-align:center">12</th>
+<td>12</td>
+<td class="summary" style="text-align:left">"<a href="/wiki/Camel_(cigarette)" title="Camel (cigarette)">Camel</a> Filters + Pheromones"</td>
+<td>Robert Berlinger</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Susan Beavers &amp; Mark Roberts</td>
+<td>January&#160;5,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-01-05</span>)</span></td>
+<td>16.75<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">[15]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep13" style="text-align:center">13</th>
+<td>13</td>
+<td class="summary" style="text-align:left">"Sarah Like Puny Alan"</td>
+<td>Robert Berlinger</td>
+<td><i>Story by</i> : Chuck Lorre<br />
+<i>Teleplay by</i> : Lee Aronsohn &amp; Don Foster</td>
+<td>January&#160;12,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-01-12</span>)</span></td>
+<td>17.86<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">[16]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep14" style="text-align:center">14</th>
+<td>14</td>
+<td class="summary" style="text-align:left">"I Can't Afford Hyenas"</td>
+<td><a href="/wiki/Rob_Schiller" title="Rob Schiller">Rob Schiller</a></td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Jeff Abugov &amp; Eddie Gorodetsky</td>
+<td>February&#160;2,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-02-02</span>)</span></td>
+<td>16.48<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep15" style="text-align:center">15</th>
+<td>15</td>
+<td class="summary" style="text-align:left">"Round One to the Hot Crazy Chick"</td>
+<td><a href="/wiki/Andrew_D._Weyman" title="Andrew D. Weyman">Andrew D. Weyman</a></td>
+<td>Chuck Lorre &amp; Lee Aronsohn</td>
+<td>February&#160;9,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-02-09</span>)</span></td>
+<td>16.96<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep16" style="text-align:center">16</th>
+<td>16</td>
+<td class="summary" style="text-align:left">"That Was Saliva, Alan"</td>
+<td>Andrew D. Weyman</td>
+<td>Chuck Lorre &amp; Lee Aronsohn</td>
+<td>February&#160;16,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-02-16</span>)</span></td>
+<td>17.39<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep17" style="text-align:center">17</th>
+<td>17</td>
+<td class="summary" style="text-align:left">"Ate the Hamburgers, Wearing the Hats"</td>
+<td>Andrew D. Weyman</td>
+<td><i>Story by</i> : Jeff Abugov &amp; Eric Lapidus<br />
+<i>Teleplay by</i> : Eddie Gorodetsky &amp; Mark Roberts</td>
+<td>February&#160;23,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-02-23</span>)</span></td>
+<td>16.48<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep18" style="text-align:center">18</th>
+<td>18</td>
+<td class="summary" style="text-align:left">"An Old Flame with a New Wick"</td>
+<td>Andrew D. Weyman</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Don Foster<br />
+<i>Teleplay by</i> : Lee Aronsohn &amp; Mark Roberts</td>
+<td>March&#160;1,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-03-01</span>)</span></td>
+<td>17.10<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep19" style="text-align:center">19</th>
+<td>19</td>
+<td class="summary" style="text-align:left">"I Remember the Coatroom, I Just Don't Remember You"</td>
+<td><a href="/wiki/Gail_Mancuso" title="Gail Mancuso">Gail Mancuso</a></td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Don Foster Eddie Gorodetsky</td>
+<td>March&#160;22,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-03-22</span>)</span></td>
+<td>16.43<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">[22]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep20" style="text-align:center">20</th>
+<td>20</td>
+<td class="summary" style="text-align:left">"Hey, I Can Pee Outside in the Dark"</td>
+<td><a href="/wiki/Gary_Halvorson" title="Gary Halvorson">Gary Halvorson</a></td>
+<td><i>Story by</i> : Chuck Lorre &amp; Lee Aronsohn<br />
+<i>Teleplay by</i> : Jeff Abugov &amp; Mark Roberts</td>
+<td>April&#160;19,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-04-19</span>)</span></td>
+<td>14.58<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">[23]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep21" style="text-align:center">21</th>
+<td>21</td>
+<td class="summary" style="text-align:left">"No Sniffing, No Wowing"</td>
+<td>Rob Schiller</td>
+<td><i>Story by</i> : Lee Aronsohn &amp; Susan Beavers<br />
+<i>Teleplay by</i> : Chuck Lorre &amp; Don Foster</td>
+<td>May&#160;3,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-05-03</span>)</span></td>
+<td>16.20<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep22" style="text-align:center">22</th>
+<td>22</td>
+<td class="summary" style="text-align:left">"My Doctor Has a Cow Puppet"</td>
+<td>Gail Mancuso</td>
+<td><i>Story by</i> : Lee Aronsohn &amp; Don Foster<br />
+<i>Teleplay by</i> : Chuck Lorre &amp; Eddie Gorodetsky</td>
+<td>May&#160;10,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-05-10</span>)</span></td>
+<td>16.00<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">[25]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep23" style="text-align:center">23</th>
+<td>23</td>
+<td class="summary" style="text-align:left">"Just Like Buffalo"</td>
+<td>Rob Schiller</td>
+<td><i>Story by</i> : Chuck Lorre &amp; Susan Beavers<br />
+<i>Teleplay by</i> : Lee Aronsohn &amp; Don Foster</td>
+<td>May&#160;17,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-05-17</span>)</span></td>
+<td>15.20<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup></td>
+</tr>
+<tr class="vevent" style="text-align:center;background:inherit">
+<th scope="row" id="ep24" style="text-align:center">24</th>
+<td>24</td>
+<td class="summary" style="text-align:left">"Can You Feel My Finger?"</td>
+<td>Rob Schiller</td>
+<td><i>Story by</i>: Chuck Lorre<br />
+<i>Teleplay by</i>: Chuck Lorre &amp; Lee Aronsohn</td>
+<td>May&#160;24,&#160;2004<span style="display:none">&#160;(<span class="bday dtstart published updated">2004-05-24</span>)</span></td>
+<td>18.16<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">[27]</a></sup></td>
+</tr>
+<
