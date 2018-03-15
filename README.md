@@ -13,26 +13,28 @@ Rose (this repository) aims to be something similar. For a given TV series, it s
 
 ## Why
 
-Two and a Half Men is one of the few shows available on Indian English channels, of which I had watched a few episodes during my JEE days. I had the recent urge to finish the series. One observation everyone would make is as the season progressed, the last seasons really took a hit. Series finale was the worst, hitting the lowest the series had ever seen (IMDB 4.3).
+Two and a Half Men is one of the few shows available on Indian English channels, of which I had watched a few episodes during JEE days. I had the recent urge to finish the series. One observation everyone would make is as the season progressed, the last seasons really took a hit. Series finale was the worst, hitting the lowest the series had ever seen (IMDB 4.3).
 
 I wanted to observe if there was any pattern here. Due to lack of proper existing tools and [GraphTV](http://graphtv.kevinformatics.com) going down, I had to take matter into my own hands.
 
 
 ## Results
 
-The results are being rendered via Google sheets charts, because they're interactive.
+The results are being rendered via Google sheets charts, because they're interactive. Clicking on a certain image would help, because I couldn't embed google charts in iframes.
 
 ### TV views
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=743901098&amp;format=interactive"></iframe>
+[![](images/views_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=743901098&amp;format=interactive)
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1825169905&amp;format=interactive"></iframe>
+[![](images/views_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1825169905&amp;format=interactive)
+
 
 ### IMDB
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1262982098&amp;format=interactive"></iframe>
+[![](images/imdb_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1262982098&amp;format=interactive)
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=678815137&amp;format=interactive"></iframe>
+
+[![](images/imdb_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=678815137&amp;format=interactive)
 
 The [dataset](https://docs.google.com/spreadsheets/d/11fuBypPfB_egoWfZCQr2TbtXgiYKT1k8ZGmih_Cgwsg) is available here for viewing.
 
