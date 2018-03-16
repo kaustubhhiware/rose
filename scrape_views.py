@@ -7,6 +7,7 @@ import requests
 import re
 import matplotlib.pyplot as plt
 import argparse
+import copy
 
 floating_point = '[-+]?[0-9]*\.?[0-9]*'
 integer = '[0-9]*'
@@ -170,14 +171,12 @@ def average_plot(views, average, loc='lower center'):
     for each in views:
         print len(each), 
     print ''
-    print average[0]
     # if average for shows length is less than individual views
     for i in range(len(average)):
         av = average_function(average[i])
         if len(views[i]) > len(average[i]):
             average[i] = average[i] + [av]* ( len(views[i]) - len(average[i]) )
 
-    print average[0]
     # remove '-'
     for each in views:
         views2 += [j if isinstance(j, float) else 0 for j in each] + [0]*8
@@ -195,18 +194,17 @@ def average_plot(views, average, loc='lower center'):
     plt.show()
 
 
-def barchart(v2, loc='upper center'):
+def barchart(views, loc='upper center'):
     maxep = 0
-    v = v2
     # remove '-' with last episode's ratings
-    for i in range(len(v)):
-        # v[i] = [j if isinstance(j, float) else 0 for j in v[i]]
-        for j in range(len(v[i])):
-            episode = v[i][j]
+    for i in range(len(views)):
+        # v[i] = [j if isinstance(j, float) else 0 for j in views[i]]
+        for j in range(len(views[i])):
+            episode = views[i][j]
             if not isinstance(episode, float):
-                v[i][j] = 0 if j==0 else v[i][j]
+                views[i][j] = 0 if j==0 else views[i][j]
 
-        maxep = max(maxep, len(v[i]))
+        maxep = max(maxep, len(views[i]))
     
     xaxis = range(maxep)
     # if number of episodes is not uniform across seasons, make sure
@@ -263,9 +261,8 @@ if __name__ == '__main__':
         views, average = wikiscrape(wikiurl)
         # views, average = wikiscrape('https://en.wikipedia.org/wiki/List_of_Two_and_a_Half_Men_episodes')
         if args.bar:
-            v2 = views
             print 'TV views barchart'
-            barchart(v2)
+            barchart(copy.deepcopy(views))
         
         if args.avg:
             print 'TV views average plot'
@@ -279,9 +276,8 @@ if __name__ == '__main__':
         views, average = imdbscrape(imdburl)
         # views, average = imdbscrape('http://www.imdb.com/title/tt0369179/')
         if args.bar:
-            v2 = views
             print 'IMDB ratings barchart'
-            barchart(v2, loc='lower center')
+            barchart(copy.deepcopy(views), loc='lower center')
         
         if args.avg:
             print 'IMDB ratings average plot'
