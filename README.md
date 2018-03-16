@@ -41,10 +41,27 @@ Charlie Sheen was one of the male lead for first 8 seasons, who was replaced by 
 
 The data confers. Observing the number of views, S11 and S12 took a big hit. S09E01 saw a change in the lead thus the spike in views. It was expected to see a spike in views every season finale, but that was not necessarily true here. Seeing IMDB, which mostly confers to scriptwriting, Season 9 onwards became really bad, so Ashton wasn't really to blame.
 
+## Usage
+
+```
+> python scrape_views.py -h                                                     16.8s  Saturday 17 March 2018 03:09:17 AM IST
+
+optional arguments:
+optional arguments:
+  -h, --help            show this help message and exit
+  -i, --imdb            Display only imdb ratings
+  -w, --wiki            Display only wikipedia US TV viewers
+  -s SHOW, --show SHOW  Provide show name
+  -b BAR, --bar BAR     Display bar chart or not
+  -a AVG, --avg AVG     Display averaged chart or not
+
+> python scrape_views.py -i -a -s 'Two and a half men'
+```
+
 ## ToDos
 
-- [ ] Scrape number of seasons from wikipedia page.
-- [ ] Make show urls dynamic. (Search wikipedia page and imdb page only by knowing show name)
+- [x] Scrape number of seasons from wikipedia page.
+- [x] Make show urls dynamic. (Search wikipedia page and imdb page only by knowing show name)
 - [ ] Print details of episode / movie playing in default video player, akin to x-ray from Amazon Prime.
 - [ ] Tests! (Works with other series, but need to detect cornercases)
 
