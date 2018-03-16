@@ -157,5 +157,5 @@ def plotting(views, average):
 
 if __name__ == '__main__':
 	# views, average = wikiscrape('https://en.wikipedia.org/wiki/List_of_Two_and_a_Half_Men_episodes')
-	views, average = imdbscrape('http://www.imdb.com/title/tt0369179/')
+	views, average = imdbscrape('http://www.imdb.com/title/tt1439629/')
 	# plotting(views, average)

@@ -22,19 +22,20 @@ I wanted to observe if there was any pattern here. Due to lack of proper existin
 
 The results are being rendered via Google sheets charts, because they're interactive. Clicking on a certain image would help, because I couldn't embed google charts in iframes.
 
+The first chart plots views for each episode across seasons. The second chart plots views per episode and average season views.
+
 ### TV views
 
-[![](images/views_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=743901098&amp;format=interactive)
-
-[![](images/views_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1825169905&amp;format=interactive)
+ . | .
+ :-: | :-:
+[![](images/views_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=743901098&amp;format=interactive) | [![](images/views_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1321595076&amp;format=interactive)
 
 
 ### IMDB
 
-[![](images/imdb_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1262982098&amp;format=interactive)
-
-
-[![](images/imdb_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=678815137&amp;format=interactive)
+ . | .
+ :-: | :-:
+[![](images/imdb_barchart.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=1262982098&amp;format=interactive) | [![](images/imdb_averaged.png)](https://docs.google.com/spreadsheets/d/e/2PACX-1vSYgcXvLA7HYxnFTLUMdW3dkvPFl9HE2ulO0qObS2Y6xsIZq1tlIabu-p1LG-2X_lBYHIZOvSrOmtpR/pubchart?oid=72754234&amp;format=interactive)
 
 The [dataset](https://docs.google.com/spreadsheets/d/11fuBypPfB_egoWfZCQr2TbtXgiYKT1k8ZGmih_Cgwsg) is available here for viewing.
 
@@ -42,9 +43,14 @@ The [dataset](https://docs.google.com/spreadsheets/d/11fuBypPfB_egoWfZCQr2TbtXgi
 
 Charlie Sheen was one of the male lead for first 8 seasons, who was replaced by Ashton Kutcher. The script writing went horrible, and some correlation in the data was expected.
 
-The data confers. Observing the number of views, S11 and S12 took a big hit. Seeing IMDB, which mostly confers to scriptwriting, Season 9 onwards became really bad, so Ashton wasn't really to blame.
+The data confers. Observing the number of views, S11 and S12 took a big hit. S09E01 saw a change in the lead thus the spike in views. It was expected to see a spike in views every season finale, but that was not necessarily true here. Seeing IMDB, which mostly confers to scriptwriting, Season 9 onwards became really bad, so Ashton wasn't really to blame.
 
-The second graph in each case has 2 plots. Individual ratings(blue) and season average ratings(red).
+## ToDos
+
+- [ ] Scrape number of seasons from wikipedia page.
+- [ ] Make show urls dynamic. (Search wikipedia page and imdb page only by knowing show name)
+- [ ] Print details of episode / movie playing in default video player, akin to x-ray from Amazon Prime.
+- [ ] Tests! (Works with other series, but need to detect cornercases)
 
 ## Licencse
 
