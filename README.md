@@ -57,6 +57,7 @@ optional arguments:
 
 > python scrape_views.py -i -a -s 'Two and a half men'
 ```
+You can view multiple imdb plots in [GALLERY.md](GALLERY.md).
 
 ## ToDos
 

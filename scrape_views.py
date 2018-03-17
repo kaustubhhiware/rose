@@ -193,10 +193,11 @@ def average_plot(views, average, loc='lower center'):
             average[i] = average[i] + [av]* ( len(views[i]) - len(average[i]) )
 
     # remove '-'
+    appenditure = min([len(each) for each in views]) + 1
     for each in views:
-        views2 += [j if isinstance(j, float) else 0 for j in each] + [0]*8
+        views2 += [j if isinstance(j, float) else 0 for j in each] + [0]*(appenditure / 2)
     for each in average:
-        average2 += [j if isinstance(j, float) else 0 for j in each] + [0]*8
+        average2 += [j if isinstance(j, float) else 0 for j in each] + [0]*(appenditure / 2)
     
     x = range( len(views2) )
     plt.plot(x, views2, label='Views')
