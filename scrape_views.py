@@ -19,6 +19,19 @@ def average_function(l):
     return sum(l2) / len(l2)
 
 
+def get_seasons_imdb(url):
+    r = requests.get(url)
+    start = [m.start() for m in re.finditer('Seasons', r.content)][0]
+    start_str = '?season='
+    season_start = start + r.content[start:].find(start_str)
+    season_end = season_start + r.content[season_start:].find('&ref')
+    num = int(r.content[ season_start + len(start_str) : season_end ])
+    global num_seasons
+    num_seasons = num
+    print 'Number of seasons', num_seasons
+    return
+
+
 def get_seasons(table1):
     # season_end = [m.start() for m in re.finditer('</a></td>', table1) ][-1]
     # seasons = table1[season_end - 100: season_end]
@@ -149,11 +162,13 @@ def imdbscrape(imdburl, isprint=True):
                 print rating
             season_views.append(rating)
 
+        if not season_views:
+            continue # undeclared seasons
+
         av = average_function(season_views)
         print '\t\tAverage', av
-
-        all_views.append(season_views)
         avg.append([av]*len(season_views))
+        all_views.append(season_views)
 
     # tabprint(all_views)
     # tabprint(avg)
@@ -271,8 +286,8 @@ if __name__ == '__main__':
     if imdb:
         imdburl = get_link(show, ' imdb', 'http://www.imdb.com')
         wikiurl = get_link(show, ' episodes wikipedia','https://en.wikipedia.org')
-        wikiscrape(wikiurl, onlySeasons=True)
         print 'Detected imdb link:', imdburl
+        get_seasons_imdb(imdburl)
         views, average = imdbscrape(imdburl)
         # views, average = imdbscrape('http://www.imdb.com/title/tt0369179/')
         if args.bar:
