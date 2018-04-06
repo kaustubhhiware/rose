@@ -204,9 +204,10 @@ def average_plot(views, average, loc='lower center'):
     plt.plot(x, average2, label='Average')
     
     plt.legend(loc=loc, ncol=4)
-    # small = min([i for i in views2 if i!=0])
-    # large = max([i for i in views2 if i!='-'])
-    # plt.ylim(int(small), int(large+1))
+    small = int( min([i for i in views2 if i!=0]) ) - 1
+    large = int( max(views2) ) + 1
+    print small, large
+    plt.ylim(small, large)
     plt.show()
 
 
