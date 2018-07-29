@@ -1,4 +1,5 @@
 ##
+## python3
 ## Scrape wikipedia to get number of views.
 ## author: @kaustubhhiware
 ##
@@ -21,14 +22,14 @@ def average_function(l):
 
 def get_seasons_imdb(url):
     r = requests.get(url)
-    start = [m.start() for m in re.finditer('Seasons', r.content)][0]
+    start = [m.start() for m in re.finditer('Seasons', r.text)][0]
     start_str = '?season='
-    season_start = start + r.content[start:].find(start_str)
-    season_end = season_start + r.content[season_start:].find('&ref')
-    num = int(r.content[ season_start + len(start_str) : season_end ])
+    season_start = start + r.text[start:].find(start_str)
+    season_end = season_start + r.text[season_start:].find('&ref')
+    num = int(r.text[ season_start + len(start_str) : season_end ])
     global num_seasons
     num_seasons = num
-    print 'Number of seasons', num_seasons
+    print ('Number of seasons', num_seasons)
     return
 
 
@@ -41,14 +42,14 @@ def get_seasons(table1):
     # num = int(filter(None, re.findall(integer, seasons[seasons_ind:]))[0])
     global num_seasons
     num_seasons = num
-    print 'Number of seasons', num_seasons
+    print( 'Number of seasons', num_seasons)
     return
 
 
 def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
     # imdb page: http://www.imdb.com/title/tt0369179/
     r = requests.get(wikiurl)
-    txt = r.content
+    txt = r.text
 
     start = [m.start() for m in re.finditer('<table', txt)]
     end = [m.start() for m in re.finditer('/table>', txt)]
@@ -65,7 +66,7 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
 
     for i in range(num_seasons):
         if isprint:
-            print 'Season ',i+1
+            print( 'Season ',i+1)
         season = txt[start[i]:end[i]]
         epstart = [m.start() for m in re.finditer('<tr', season)]
         epend = [m.start() for m in re.finditer('tr>', season)]
@@ -73,7 +74,7 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
 
         for j in range(1, len(epstart)):
             if isprint:
-                print '\t\tEpisode', j,
+                print( '\t\tEpisode', j,)
             episode = season[epstart[j]:epend[j]]
             view_start = [m.start() for m in re.finditer('<td', episode)][-1]
             view_end = [m.start() for m in re.finditer('/td>', episode)][-1]
@@ -87,24 +88,24 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
                 episodeviews = numviews
 
             if isprint:
-                print episodeviews
+                print( episodeviews)
             season_views.append(episodeviews)
 
         if isprint:
-            print season_views
+            print( season_views)
         all_views.append(season_views)
 
 
     # for i in range(num_seasons):
-    # 	print 'Season ',i
-    # 	for each in all_views[i]:
-    # 		print each
-    # 	print '\n\n'
+    #   print( 'Season ',i)
+    #   for each in all_views[i]:
+    #       print( each)
+    #   print( '\n\n')
     for i in range(num_seasons):
         if isprint:
-            print len(all_views[i]),
+            print( len(all_views[i]),)
 
-    print ''
+    print( '')
 
     v, a, avg = [], [], [] # views, average
 
@@ -120,8 +121,8 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
         avg.append(season_av)
 
         # for j in range(8):
-        # 	a.append(0.0-av)
-        # 	v.append(0)
+        #   a.append(0.0-av)
+        #   v.append(0)
 
     # tabprint(a)
     # tabprint(v)
@@ -130,13 +131,13 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
 
 
 def tabprint(l):
-    print l
+    print( l)
     for season in l:
         for episode in season:
-            print str(episode)+'\t',
-        print '0\t0\t0\t0\t0\t0\t0\t0\t',
+            print( str(episode)+'\t'),
+        print( '0\t0\t0\t0\t0\t0\t0\t0\t'),
 
-    print '\n\n\n'
+    print( '\n\n\n')
 
 
 def imdbscrape(imdburl, isprint=True):
@@ -146,27 +147,27 @@ def imdbscrape(imdburl, isprint=True):
         season_views = []
         url = imdburl + 'episodes?season='+str(i)
         r = requests.get(url)
-        txt = r.content
+        txt = r.text
         if isprint:
-            print 'Season ',i
+            print( 'Season ',i)
         
         end = [m.start() for m in re.finditer('<span class="ipl-rating-star__total-votes">', txt)]
         for j in range(len(end)):
             if isprint:
-                print '\t\tEpisode', j+1,
+                print( '\t\tEpisode', j+1,)
             each = end[j]
             episode = txt[each-100:each]
             rating = float([k for k in filter(None, re.findall(floating_point, episode)) if k!='-'][0])
-            # print rating
+            # print( rating)
             if isprint:
-                print rating
+                print( rating)
             season_views.append(rating)
 
         if not season_views:
             continue # undeclared seasons
 
         av = average_function(season_views)
-        print '\t\tAverage', av
+        print( '\t\tAverage', av)
         avg.append([av]*len(season_views))
         all_views.append(season_views)
 
@@ -174,8 +175,8 @@ def imdbscrape(imdburl, isprint=True):
     # tabprint(avg)
 
     # for each in all_views:
-    #     print len(each),
-    # print ''
+    #     print( len(each),)
+    # print( '')
     return all_views, avg
 
 
@@ -184,8 +185,8 @@ def average_plot(views, average, loc='lower center'):
     views2, average2 = [], []
 
     for each in views:
-        print len(each), 
-    print ''
+        print( len(each), )
+    print( '')
     # if average for shows length is less than individual views
     for i in range(len(average)):
         av = average_function(average[i])
@@ -194,10 +195,11 @@ def average_plot(views, average, loc='lower center'):
 
     # remove '-'
     appenditure = min([len(each) for each in views]) + 1
+    print(appenditure)
     for each in views:
-        views2 += [j if isinstance(j, float) else 0 for j in each] + [0]*(appenditure / 2)
+        views2 += [j if isinstance(j, float) else 0 for j in each] + [0]* int(appenditure / 2)
     for each in average:
-        average2 += [j if isinstance(j, float) else 0 for j in each] + [0]*(appenditure / 2)
+        average2 += [j if isinstance(j, float) else 0 for j in each] + [0]* int(appenditure / 2)
     
     x = range( len(views2) )
     plt.plot(x, views2, label='Views')
@@ -206,7 +208,8 @@ def average_plot(views, average, loc='lower center'):
     plt.legend(loc=loc, ncol=4)
     small = int( min([i for i in views2 if i!=0]) ) - 1
     large = int( max(views2) ) + 1
-    print small, large
+    # Relative or not ?    
+    # print( small, large)
     plt.ylim(small, large)
     plt.show()
 
@@ -242,9 +245,9 @@ def get_link(show, key, starturl):
     r = requests.get(search)
 
     end = '&amp;'
-    start_index = r.content.find(starturl)
-    end_index = start_index + r.content[start_index:].find(end)
-    url = r.content[start_index: end_index]
+    start_index = r.text.find(starturl)
+    end_index = start_index + r.text[start_index:].find(end)
+    url = r.text[start_index: end_index]
 
     return url
    
@@ -274,28 +277,28 @@ if __name__ == '__main__':
 
     if wiki:
         wikiurl = get_link(show, ' episodes wikipedia', 'https://en.wikipedia.org')
-        print 'Detected wiki link:', wikiurl
+        print( 'Detected wiki link:', wikiurl)
         views, average = wikiscrape(wikiurl)
         # views, average = wikiscrape('https://en.wikipedia.org/wiki/List_of_Two_and_a_Half_Men_episodes')
         if args.bar:
-            print 'TV views barchart'
+            print( 'TV views barchart')
             barchart(copy.deepcopy(views))
         
         if args.avg:
-            print 'TV views average plot'
+            print( 'TV views average plot')
             average_plot(views, average)
 
     if imdb:
-        imdburl = get_link(show, ' imdb', 'http://www.imdb.com')
+        imdburl = get_link(show, ' imdb', 'https://www.imdb.com')
         wikiurl = get_link(show, ' episodes wikipedia','https://en.wikipedia.org')
-        print 'Detected imdb link:', imdburl
+        print( 'Detected imdb link:', imdburl)
         get_seasons_imdb(imdburl)
         views, average = imdbscrape(imdburl)
         # views, average = imdbscrape('http://www.imdb.com/title/tt0369179/')
         if args.bar:
-            print 'IMDB ratings barchart'
+            print( 'IMDB ratings barchart')
             barchart(copy.deepcopy(views), loc='lower center')
         
         if args.avg:
-            print 'IMDB ratings average plot'
+            print( 'IMDB ratings average plot')
             average_plot(views, average)

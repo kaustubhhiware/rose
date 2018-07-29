@@ -44,7 +44,7 @@ The data confers. Observing the number of views, S11 and S12 took a big hit. S09
 ## Usage
 
 ```
-> python scrape_views.py -h
+> python3 scrape_views.py -h
 
 optional arguments:
 optional arguments:
@@ -55,7 +55,7 @@ optional arguments:
   -b BAR, --bar BAR     Display bar chart or not
   -a AVG, --avg AVG     Display averaged chart or not
 
-> python scrape_views.py -i -a -s 'Two and a half men'
+> python3 scrape_views.py -i -a -s 'Two and a half men'
 ```
 You can view multiple imdb plots in [GALLERY.md](GALLERY.md).
 
