@@ -179,6 +179,26 @@ def imdbscrape(imdburl, isprint=True):
     # print( '')
     return all_views, avg
 
+def episode_scrape(show,season_num,episode_num):
+    imdburl = get_link(show, ' imdb', 'https://www.imdb.com')
+    wikiurl = get_link(show, ' episodes wikipedia', 'https://en.wikipedia.org')
+    imdb_rating=[]
+    url = imdburl + 'episodes?season='+str(season_num)
+    r = requests.get(url)
+    txt = r.text
+    end = [m.start() for m in re.finditer('<span class="ipl-rating-star__total-votes">', txt)]
+    for j in range(len(end)):
+        each = end[j]
+        episode = txt[each-100:each]
+        rating = float([k for k in [_f for _f in re.findall(floating_point, episode) if _f] if k!='-'][0])
+        imdb_rating.append(rating)
+    season_views,avg=wikiscrape(wikiurl,False)
+    print("IMDB Rating :",imdb_rating[episode_num-1])
+    #print(season_views)
+    print("US Viewers(millions) :",season_views[season_num-1][(episode_num-1)])
+    imdburl = get_link(show, ' season '+str(season_num)+' episode '+str(episode_num)+' imdb', 'https://www.imdb.com')   
+    print("IMDB Link :",url)
+    
 
 def average_plot(views, average, loc='lower center'):
 
@@ -259,6 +279,7 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--show', action='store', help="Provide show name")
     parser.add_argument('-b', '--bar', action='store_true', help="Display bar chart or not")
     parser.add_argument('-a', '--avg', action='store_true', help="Display averaged chart or not")
+    parser.add_argument('-e', '--epi', action='store', help="Provide Episode name")
     args = parser.parse_args()
 
     imdb, wiki = True, True
@@ -302,3 +323,19 @@ if __name__ == '__main__':
         if args.avg:
             print( 'IMDB ratings average plot')
             average_plot(views, average)
+            
+    if not args.epi:
+        epi =""
+    else:
+        epi = args.epi
+        epi=epi.upper()
+        season_num=0
+        episode_num=0
+        s_index=epi.index('S')
+        e_index=epi.index('E')
+        try:
+            season_num=int(epi[s_index+1:e_index])
+            episode_num=int(epi[e_index+1:])
+        except ValueError:
+            print('Invalid episode nomenclature')
+        episode_scrape(show,season_num,episode_num)

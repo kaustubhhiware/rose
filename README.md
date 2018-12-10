@@ -47,16 +47,19 @@ The data confers. Observing the number of views, S11 and S12 took a big hit. S09
 > python3 scrape_views.py -h
 
 optional arguments:
-optional arguments:
   -h, --help            show this help message and exit
   -i, --imdb            Display only imdb ratings
   -w, --wiki            Display only wikipedia US TV viewers
   -s SHOW, --show SHOW  Provide show name
   -b BAR, --bar BAR     Display bar chart or not
   -a AVG, --avg AVG     Display averaged chart or not
+  -e EPISODE, --epi EPISODE Provide Specific Episode Details
 
 > python3 scrape_views.py -i -a -s 'Two and a half men'
+> python3 scrape_views.py -s 'Two and a half men' -e 'S03E06'
+
 ```
+
 You can view multiple imdb plots in [GALLERY.md](GALLERY.md).
 
 ## ToDos
