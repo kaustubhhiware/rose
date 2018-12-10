@@ -51,16 +51,18 @@ optional arguments:
   -i, --imdb            Display only imdb ratings
   -w, --wiki            Display only wikipedia US TV viewers
   -s SHOW, --show SHOW  Provide show name
-  -b BAR, --bar BAR     Display bar chart or not
-  -a AVG, --avg AVG     Display averaged chart or not
-  -e EPISODE, --epi EPISODE Provide Specific Episode Details
+  -b, --bar             Display bar chart or not
+  -a, --avg             Display averaged chart or not
+  -e EPI, --epi EPI     Provide Episode name
 
+# Plot averaged IMDB ratings for a show
 > python3 scrape_views.py -i -a -s 'Two and a half men'
+# Fetch information for a single episode
 > python3 scrape_views.py -s 'Two and a half men' -e 'S03E06'
 
 ```
 
-You can view multiple imdb plots in [GALLERY.md](GALLERY.md).
+More imdb plots are available in [GALLERY.md](GALLERY.md).
 
 ## ToDos
 
@@ -68,6 +70,8 @@ You can view multiple imdb plots in [GALLERY.md](GALLERY.md).
 - [x] Make show urls dynamic. (Search wikipedia page and imdb page only by knowing show name)
 - [ ] Print details of episode / movie playing in default video player, akin to x-ray from Amazon Prime.
 - [ ] Tests! (Works with other series, but need to detect cornercases)
+
+Contributors can have a look at [text_logs](text_logs/) folder to get a sample of the download response.
 
 ## Licencse
 
