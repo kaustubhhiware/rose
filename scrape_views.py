@@ -81,10 +81,10 @@ def wikiscrape(wikiurl, isprint=True, onlySeasons = False):
         
             views = episode[view_start:view_end]
             found = re.findall(not_found, views)
-            if len(found) > 0:
+            if len(found) == 0:
                 episodeviews = '-'
             else:
-                numviews = float(filter(None, re.findall(floating_point, views))[0])
+                numviews = float([_f for _f in re.findall(floating_point, views) if _f][0])
                 episodeviews = numviews
 
             if isprint:
@@ -157,7 +157,7 @@ def imdbscrape(imdburl, isprint=True):
                 print( '\t\tEpisode', j+1,)
             each = end[j]
             episode = txt[each-100:each]
-            rating = float([k for k in filter(None, re.findall(floating_point, episode)) if k!='-'][0])
+            rating = float([k for k in [_f for _f in re.findall(floating_point, episode) if _f] if k!='-'][0])
             # print( rating)
             if isprint:
                 print( rating)
@@ -316,7 +316,7 @@ if __name__ == '__main__':
         imdb = False
     
     if not args.show:
-        show = raw_input("Enter show name, in best form as possible : ")
+        show = input("Enter show name, in best form as possible : ")
     else:
         show = args.show
     # wikiurl = 'https://en.wikipedia.org/wiki/List_of_' + show.replace(' ', '_') + '_episodes'
