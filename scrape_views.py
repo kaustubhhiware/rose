@@ -199,6 +199,30 @@ def episode_scrape(show,season_num,episode_num):
     imdburl = get_link(show, ' season '+str(season_num)+' episode '+str(episode_num)+' imdb', 'https://www.imdb.com')   
     print("IMDB Link :",url)
     
+def cast_scrape(show):
+    wikiurl=get_link(show, 'star cast' , 'https://en.wikipedia.org')
+    r = requests.get(wikiurl)
+    txt = r.text
+    start = [m.start() for m in re.finditer('Starring', txt)]
+    txt=txt[start[0]::]
+    end = [m.start() for m in re.finditer('/div>', txt)]
+    txt=txt[0:end[0]]
+    end = [m.start() for m in re.finditer('<li>', txt)]
+    txt=txt[end[0]::]
+    l=[];
+    while(len(txt)>0):
+        try:
+            end = [m.start() for m in re.finditer('">', txt)]
+            txt=txt[end[0]+2::]
+            end = [m.start() for m in re.finditer('<', txt)]
+            l.append(txt[0:end[0]])
+            end = [m.start() for m in re.finditer('<li>', txt)]
+            txt=txt[end[0]::]
+        except IndexError:
+            break
+        
+    return l
+    
 
 def average_plot(views, average, loc='lower center'):
 
@@ -280,6 +304,7 @@ if __name__ == '__main__':
     parser.add_argument('-b', '--bar', action='store_true', help="Display bar chart or not")
     parser.add_argument('-a', '--avg', action='store_true', help="Display averaged chart or not")
     parser.add_argument('-e', '--epi', action='store', help="Provide Episode name")
+    parser.add_argument('-c', '--cast', action='store_true', help="Displays Cast of the Show")
     args = parser.parse_args()
 
     imdb, wiki = True, True
@@ -336,6 +361,13 @@ if __name__ == '__main__':
         try:
             season_num=int(epi[s_index+1:e_index])
             episode_num=int(epi[e_index+1:])
+            episode_scrape(show,season_num,episode_num)
         except ValueError:
             print('Invalid episode nomenclature')
-        episode_scrape(show,season_num,episode_num)
+            
+    cast=True;
+    if args.cast:
+        l=cast_scrape(show)
+        print("List of Top Casts of the Show : ")
+        for i in range(len(l)):
+            print(i+1,'.',l[i])
