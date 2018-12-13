@@ -54,11 +54,14 @@ optional arguments:
   -b, --bar             Display bar chart or not
   -a, --avg             Display averaged chart or not
   -e EPI, --epi EPI     Provide Episode name
+  -c, --cast            Displays Cast of the show
 
 # Plot averaged IMDB ratings for a show
 > python3 scrape_views.py -i -a -s 'Two and a half men'
 # Fetch information for a single episode
 > python3 scrape_views.py -s 'Two and a half men' -e 'S03E06'
+# Fetch information for the star cast of the show
+> python3 scrape_views.py -c -s 'Two and a half men'
 
 ```
 
