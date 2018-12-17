@@ -75,7 +75,8 @@ More imdb plots are available in [GALLERY.md](GALLERY.md).
 - [ ] Tests! (Works with other series, but need to detect cornercases)
 
 Contributors can have a look at [text_logs](text_logs/) folder to get a sample of the download response.
+Before contributing, please checkout [CONTRIBUTING.MD](CONTRIBUTING.MD)
 
-## Licencse
+## License
 
 The MIT License (MIT) 2018 - [Kaustubh Hiware](http://kaustubhhiware.github.io). Have a look at the [LICENSE](LICENSE) for more details.
