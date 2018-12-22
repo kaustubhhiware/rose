@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Rose</title>
+       <link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
+       <link rel="stylesheet" href="static/bootstrap-theme.min.css">
+       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+ 
+    </head>
+    <body>
+ 
+ 
+<div class="container">
+ {{form.csrf}}
+ 
+  <h2>Rose Web App</h2>
+  
+  <form  action="" method="post" >
+   
+    <div class="form-group">
+      <label for="name">Enter TV Series:</label>
+      <fieldset class="form-group">
+                
+                <div class="form-group">
+                    
+
+                    {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+       </fieldset>
+	
+
+                      
+                      <div class="checkbox">
+                        <label>
+                          {{form.imdb}} Display only imdb ratings
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          {{form.bar}} Display bar chart
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          {{form.avg}} Display averaged chart
+                        </label>
+                      </div>
+                   
+    
+ 
+	
+      <button type="submit" class="btn btn-success">Submit</button>
+
+
+
+  </form>
+ 
+  <br>
+         
+	     
+ 
+</div>
+<br>      
+</div>
+</div>
+</body>
+</html>

@@ -30,7 +30,7 @@ def get_seasons_imdb(url):
     global num_seasons
     num_seasons = num
     print ('Number of seasons', num_seasons)
-    return
+    return num_seasons
 
 
 def get_seasons(table1):
@@ -140,7 +140,7 @@ def tabprint(l):
     print( '\n\n\n')
 
 
-def imdbscrape(imdburl, isprint=True):
+def imdbscrape(imdburl,decider, isprint=True):
     all_views, avg = [], []
 
     for i in range(1, num_seasons+1):
@@ -148,18 +148,21 @@ def imdbscrape(imdburl, isprint=True):
         url = imdburl + 'episodes?season='+str(i)
         r = requests.get(url)
         txt = r.text
-        if isprint:
-            print( 'Season ',i)
+        if decider==1:
+           if isprint:
+              print( 'Season ',i)
         
         end = [m.start() for m in re.finditer('<span class="ipl-rating-star__total-votes">', txt)]
         for j in range(len(end)):
-            if isprint:
-                print( '\t\tEpisode', j+1,)
+            if decider==1:
+                if isprint:
+                  print( '\t\tEpisode', j+1,)
             each = end[j]
             episode = txt[each-100:each]
             rating = float([k for k in [_f for _f in re.findall(floating_point, episode) if _f] if k!='-'][0])
             # print( rating)
-            if isprint:
+            if decider==1:
+               if isprint:
                 print( rating)
             season_views.append(rating)
 
@@ -167,7 +170,8 @@ def imdbscrape(imdburl, isprint=True):
             continue # undeclared seasons
 
         av = average_function(season_views)
-        print( '\t\tAverage', av)
+        if decider==1:
+            print( '\t\tAverage', av)
         avg.append([av]*len(season_views))
         all_views.append(season_views)
 
@@ -224,7 +228,7 @@ def cast_scrape(show):
     return l
     
 
-def average_plot(views, average, loc='lower center'):
+def average_plot(views,average,show,decider,loc='lower center'):
 
     views2, average2 = [], []
 
@@ -255,10 +259,13 @@ def average_plot(views, average, loc='lower center'):
     # Relative or not ?    
     # print( small, large)
     plt.ylim(small, large)
-    plt.show()
+    if decider==1:
+       plt.savefig('static/'+show+'avgchart.png')
+    if decider==2:
+       plt.show()
 
 
-def barchart(views, loc='upper center'):
+def barchart(views,show,decider,loc='upper center'):
     maxep = 0
     # remove '-' with last episode's ratings
     for i in range(len(views)):
@@ -280,7 +287,10 @@ def barchart(views, loc='upper center'):
         plt.plot(xaxis, views[i], label=str(i+1))
     
     plt.legend(loc=loc, ncol = 4)
-    plt.show()
+    if decider==1:
+       plt.savefig('static/'+show+'barchart.png')
+    if decider==2:
+       plt.show()
 
 
 def get_link(show, key, starturl):
@@ -328,26 +338,26 @@ if __name__ == '__main__':
         # views, average = wikiscrape('https://en.wikipedia.org/wiki/List_of_Two_and_a_Half_Men_episodes')
         if args.bar:
             print( 'TV views barchart')
-            barchart(copy.deepcopy(views))
+            barchart(copy.deepcopy(views),show,2)
         
         if args.avg:
             print( 'TV views average plot')
-            average_plot(views, average)
+            average_plot(views, average,show,2)
 
     if imdb:
         imdburl = get_link(show, ' imdb', 'https://www.imdb.com')
         wikiurl = get_link(show, ' episodes wikipedia','https://en.wikipedia.org')
         print( 'Detected imdb link:', imdburl)
         get_seasons_imdb(imdburl)
-        views, average = imdbscrape(imdburl)
+        views, average = imdbscrape(imdburl,1)
         # views, average = imdbscrape('http://www.imdb.com/title/tt0369179/')
         if args.bar:
             print( 'IMDB ratings barchart')
-            barchart(copy.deepcopy(views), loc='lower center')
+            barchart(copy.deepcopy(views),show,2)
         
         if args.avg:
             print( 'IMDB ratings average plot')
-            average_plot(views, average)
+            average_plot(views, average,show,2)
             
     if not args.epi:
         epi =""
