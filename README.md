@@ -1,6 +1,6 @@
 # Rose
 
-Analyse all kinds of data for a TV series.
+Analyse all kinds of data for a TV series. Available as a webapp at [rose-tv.herokuapp.com](http://rose-tv.herokuapp.com/).
 
 <img src="https://imgur.com/F2EXKVb.png" style="margin: 0 auto; display: block;" alt="THUNDERWOMAN!">
 
@@ -44,6 +44,9 @@ The data confers. Observing the number of views, S11 and S12 took a big hit. S09
 ## Usage
 
 ```
+# install dependencies
+> pip3 install -r requirements.txt
+
 > python3 scrape_views.py -h
 
 optional arguments:
@@ -58,14 +61,29 @@ optional arguments:
 
 # Plot averaged IMDB ratings for a show
 > python3 scrape_views.py -i -a -s 'Two and a half men'
+
 # Fetch information for a single episode
 > python3 scrape_views.py -s 'Two and a half men' -e 'S03E06'
+
 # Fetch information for the star cast of the show
 > python3 scrape_views.py -c -s 'Two and a half men'
 
 ```
 
 More imdb plots are available in [GALLERY.md](GALLERY.md).
+
+### Running the webapp
+
+The codebase related to the webapp can be found at [webapp/](webapp/) folder. Further details are available there.
+
+```
+# Option 1: Use procfile
+> heroku local web
+
+# Option 2: Run via flask directly
+> cd webapp
+> python3 flaskwebapp.py
+```
 
 ## ToDos
 

@@ -1,2 +1,5 @@
+Flask==1.0.2
+Flask-WTF==0.14.2
+gunicorn==19.9.0
 requests==2.20.1
 matplotlib==3.0.2
