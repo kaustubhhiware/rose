@@ -82,15 +82,32 @@ if __name__ == '__main__':
             print("You aren't playing any episode currently.")
         else:
             filename = unquote(file_location[file_location.rfind('/') + 1:file_location.rfind('.')])
-            show = filename[0:filename.rfind(' ')]
-            epi = filename[filename.rfind(' ') + 1:]
+
             try:
+                s = '[Ss][0-9]+[Ee][0-9]+'
+                end = [m.start() for m in re.finditer(s, filename)]
+                each = end[0]
+                name = filename[0:each]
+                epi = filename[each:each + 6]
+                epi = epi.upper()
+
                 s_index = epi.index('S')
                 e_index = epi.index('E')
                 season_num = int(epi[s_index + 1:e_index])
                 episode_num = int(epi[e_index + 1:])
+
+                show = ''
+                for i in range(len(name)):
+                    if name[i] == '.':
+                        show += ' '
+                    else:
+                        show += name[i]
+                while show[len(show) - 1] == '-' or show[len(show) - 1] == ' ':
+                    show = show[:-1]
+
                 episode_scrape(show, season_num, episode_num)
-            except ValueError:
+            except (ValueError, IndexError) as e:
                 print('Invalid episode nomenclature')
+
     except FileNotFoundError:
         print('Please install playerctl to continue using this feature.')
