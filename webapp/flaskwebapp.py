@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 class Rose(FlaskForm):
     name = TextField('Name:', validators=[DataRequired()])
     #wiki=BooleanField('Display only wikipedia US TV viewers')
-    imdb=BooleanField('Display only imdb ratings')
+    #imdb=BooleanField('Display only imdb ratings')
     bar=BooleanField('Display bar chart')
     avg=BooleanField('Display averaged chart')
  
@@ -32,11 +32,16 @@ def home():
         #Access data in the form
         
         show=(request.form.get('name'))
-               
-        if request.form.get('imdb')=="y":
+         #request.form.get returns true if the toggle switch is pushed to imdb      
+        if request.form.get('toggleswitch'):
            b="y"
+           #setting wiki false
+           a="None"
+		  
         else :
+		   #setting imdb false
            b="None"
+           a="y"
         if request.form.get('bar')=="y":
            c="y"
         else :
@@ -51,13 +56,13 @@ def home():
 
         
         
-        return redirect(url_for('tv_series',show=show,b=b,c=c,d=d))
+        return redirect(url_for('tv_series',show=show,a=a,b=b,c=c,d=d))
   
   
     return render_template("home.html",form = form)
 
-@app.route("/tvseries/<show>/<b>/<c>/<d>",methods=['GET','POST'])
-def tv_series(show,b,c,d):
+@app.route("/tvseries/<show>/<a>/<b>/<c>/<d>",methods=['GET','POST'])
+def tv_series(show,a,b,c,d):
      
     if b=="y":
         rang=[]

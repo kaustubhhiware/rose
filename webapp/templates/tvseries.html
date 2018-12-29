@@ -2,47 +2,94 @@
 <html>
     <head>
         <title>TV SERIES DATA</title>
-       <link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
-       <link rel="stylesheet" href="static/bootstrap-theme.min.css">
-       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
- 
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        
+
+<style>
+table{
+
+	 border-collapse:collapse;
+}
+table th{
+
+	text-align:left;
+	background-color:#3a6070;
+	color:#FFF;
+	padding: 4px 30px 4px 8px;
+	
+}
+table td{
+
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+	
+}
+
+ </style>
     </head>
     <body>
-  
-   
     <h1>Detected imdb link:{{imdburl}}</h1>
-    <h2>Number of seasons = {{k}}</h2>   
-        
-    {% set count = [1] %}
+    <h2>Number of seasons = {{k}}</h2> 
+     </br>
+	 
     
+	{% set count = [1] %}
+    <table>
+    <tbody>
     {% for result in views %}
           {% set i = [1] %}
-                  <h3>Season {{count[0]}}</h3>
-                      
-                          {% for elem in result %}
-            
-                              <td>Episode {{i[0]}}&emsp;&emsp;{{elem}} </td> </br>
-         {% if i.append(i.pop() + 1) %}{% endif %}
-                           {% endfor %}
-                            <h4>Average rating&ensp;{{data[count[0]-1]}}</h4>
-                          
+		   
+              		       			                       
+				 
+                                  
+                     {%if count[0]==1%}
+                       <tr>
+                        <td></td>
+					    {% for elem in result %}
+                              <th scope="col" >Episode{{i[0]}}</th> 
+							  
+		                	{% if i.append(i.pop() + 1) %}{% endif %}
+						
+                        {% endfor %}
+                         <th scope="col">Average rating</th>
+                        </tr>
+                        
+                     {%endif%} 
+                             
+                        <tr>
+                        <th scope="row">Season {{count[0]}}</th>
+                        {% set tester = [1] %}
+                        {% for elem in result %}
+                            <td>{{elem}}</td> 
+						{% if tester.append(tester.pop() + 1) %}{% endif %}
+		                			
+                        {% endfor %}
+                        
+                        <td >{{data[count[0]-1]}}</td>
+                        
+                        </tr>
+				   
                           {% if count.append(count.pop() + 1) %}{% endif %}
-                                       
+				  	 	
+				                                       
     {% endfor %}
-    {%if c=="y"%}
-    <div style="text-align:center">
-<h4>Bar Chart</h4>
-</div>
-     
-     <img src={{image_file}} style="margin: 0 auto; display: block;">
-     {%endif%}
-     {%if d=="y"%}
+    </tbody>
+	</table>
+	</br>
+         {%if c=="y"%}
          <div style="text-align:center">
-  <h4>Average Plot</h4>
-</div>
+           <h4>Bar Chart</h4>
+         </div>
+     
+         <img src={{image_file}} style="margin: 0 auto; display: block;">
+         {%endif%}
+         {%if d=="y"%}
+          <div style="text-align:center">
+            <h4>Average Plot</h4>
+          </div>
    
-      <img src={{img_file}} style="margin: 0 auto; display: block;">
-      {%endif%}
+          <img src={{img_file}} style="margin: 0 auto; display: block;">
+         {%endif%}
     
     
    
